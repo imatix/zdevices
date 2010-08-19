@@ -1,0 +1,15 @@
+{
+    "verbose": true,
+    "type": "queue",
+    "iothreads": 1,
+    "frontend": {
+        "option": {
+            "hwm": 1000,
+            "swap": 25000000
+        },
+        "bind": "tcp://eth0:5555"
+    },
+    "backend": {
+        "bind": "tcp://eth0:5556"
+    }
+}

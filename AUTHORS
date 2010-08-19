@@ -1,0 +1,12 @@
+Authors
+=======
+
+Pieter Hintjens <ph@imatix.com>
+
+Credits
+=======
+
+Martin Lucina <mato@kotelna.sk>
+    Wrote autotools wrapping that formed basis for autotooling this project.
+Dave Gamble (cJSON)
+    Wrote cJSON which forms basis for zfl_config class.
