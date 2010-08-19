@@ -1,0 +1,38 @@
+zdevices Bylaws
+===============
+
+Goals
+-----
+
+The principal goal is to collect examples of devices that can be reused and
+improved by others.  It is a device wiki.
+
+Overall Structure
+-----------------
+
+Repository is organized by language, and within each language, one directory
+per independent project, which can hold as many devices as the author wishes.
+Each project should be self-contained with:
+
+* A README that explains the devices and how they work
+* The necessary build scripts and/or instructions
+* Sample configuration data as needed
+
+Git Workflow
+------------
+
+The ZFL project uses no specific git workflow.  All committers work directly
+on master.  The zdevices project makes no releases, and has no version number.
+
+Contributions
+-------------
+
+All contributors are listed in AUTHORS.  All git committers agree in advance
+that they license their contributions under the GPL, that they are the original
+authors of their work, or that they can certify the origin of the code.
+
+All packages are maintained by a single person, who is the responsible editor
+for that package and who is named in the README as such.  This is usually the
+originator of the package.  Whereas several people can collaborate on a package,
+one single person is always the lead maintainer and the one to blame when it
+breaks.

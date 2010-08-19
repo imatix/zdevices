@@ -1,0 +1,37 @@
+Welcome
+-------
+
+zdevices is the ZeroMQ devices collection, a repository of device packages
+written by and for ZeroMQ users.  All code is GPLv3 licensed.
+
+Building and installation instructions are provided with each package.
+
+zdevices is organized by language.
+
+Resources
+---------
+
+zdevices is developed by and for the ZeroMQ community.
+
+Websites: http://www.zeromq.org/docs:zdevices
+
+Development mailing list: zeromq-dev@lists.zeromq.org
+Announcements mailing list: zeromq-announce@lists.zeromq.org
+
+Git repository: http://github.com/imatix/zdevices
+
+ZeroMQ developers can also be found on the IRC channel #zeromq, on the
+Freenode network (irc.freenode.net).
+
+Contributions
+-------------
+
+See the BYLAWS file included with the distribution.
+
+Copying
+-------
+
+Free use of this software is granted under the terms of the GNU General Public
+License (LGPL). For details see the files `COPYING` included with the
+distribution.
+
