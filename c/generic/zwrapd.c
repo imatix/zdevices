@@ -1,9 +1,9 @@
 /*  =========================================================================
-    device.c
+    zwrapd.c
 
-    Simple device launcher that will start a 0MQ queue, forwarder, or streamer
-    device from a JSON configuration file.  The config file format follows a
-    standard that is documented in zfl_config[7].  This is an example:
+    Generic device launcher that will start a 0MQ built-in device from a JSON
+    configuration file.  The config file format follows a standard that is
+    documented at http://rfc.zeromq.org/spec:3.  This is an example:
 
     {
         "verbose": false,

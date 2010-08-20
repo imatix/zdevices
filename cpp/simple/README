@@ -1,0 +1,52 @@
+Author
+------
+
+These devices were written by Martin Sustrik <sustrik@250bpm.com> and last
+updated for the zdevices project by Pieter Hintjens <ph@imatix.com>.
+
+Status
+------
+
+Not actively maintained, but these serve as examples of how to use the 0MQ
+built-in devices in C++.  For an up-to-date generic device wrapper, see the
+zdevices c/generic project.
+
+Origins
+-------
+
+These three devices were originally packaged with ZeroMQ.  They implement the
+standard built-in devices ZMQ_QUEUE, ZMQ_FORWARDER and ZMQ_STREAMER (see
+zmq_device[3]).
+
+The devices use an XML configuration file that you pass as first argument.  The
+file syntax is (for zmq_queue.cpp):
+
+<queue>
+  <in>
+    <bind addr="endpoint" />...
+    <connect addr="address" />...
+  </in>
+  <out>
+    <bind addr="endpoint" />...
+    <connect addr="address" />...
+  </out>
+</queue>
+
+For zmq_forwarder and zmq_streamer the root items are 'forwarder' and
+'streamer'.
+
+Building
+--------
+
+With gcc:
+
+    g++ zmq_queue.cpp -lzmq -o zmq_queue
+    g++ zmq_forwarder.cpp -lzmq -o zmq_forwarder
+    g++ zmq_streamer.cpp -lzmq -o zmq_streamer
+
+Dependencies
+------------
+
+These devices use xmlParser by Frank Vanden Berghen, which is included in the
+import directory.  The code for xmlParser is directly included into the source
+code, no need to compile xmlParser separately.
