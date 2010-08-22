@@ -1,0 +1,83 @@
+zdevice(1)
+==========
+
+NAME
+----
+zdevice - start standard 0MQ device
+
+
+SYNOPSIS
+--------
+
+zdevice CONFIG | DEVICE FRONTEND BACKEND
+
+CONFIG:
+    ZDCF config file or '-' meaning stdin
+DEVICE:
+    'zqueue', 'zforwarder', or 'zstreamer'
+FRONTEND:
+    Endpoint for device frontend socket
+BACKEND:
+    Endpoint for device backend socket
+
+The ZeroMQ Device Configuration Format is defined at
+http://rfc.zeromq.org/spec:3
+
+
+DESCRIPTION
+-----------
+
+zdevice is a device launcher that will start a queue, forwarder, or streamer
+device from a JSON configuration file or automagically from the command line.
+The config file follows ZDCF as at http://rfc.zeromq.org/spec:3.  Here is an
+example:
+
+    {
+        "context": {
+            "iothreads": 1,
+            "verbose": true
+        },
+        "main" : {
+            "type": "zqueue",
+            "frontend": {
+                "option": {
+                    "hwm": 1000,
+                    "swap": 25000000
+                },
+                "bind": "tcp://eth0:5555"
+            },
+            "backend": {
+                "bind": "tcp://eth0:5556"
+            }
+        }
+    }
+
+
+To verify your JSON files use http://www.jsonlint.com.
+
+Command-line examples:
+
+    #   Start queue device
+    zdevice zqueue ipc://frontend ipc://backend
+
+
+AUTHORS
+-------
+
+zdevice is based on the ZFL device example.  It was written by Pieter Hintjens
+<ph@imatix.com>.
+
+RESOURCES
+---------
+
+* ZFL repository - http://github.com/imatix/zfl
+* zdevices repository - http://github.com/imatix/zdevices
+
+COPYRIGHT
+---------
+
+Copyright (c) 1991-2010 iMatix Corporation and contributors. License LGPLv3+
+
+This is free software: you are free to change it and redistribute it.  There
+is NO WARRANTY, to the extent permitted by law.  For details see the file
+COPYING included in the zdevices distribution.
