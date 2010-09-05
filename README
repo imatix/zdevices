@@ -2,7 +2,7 @@ Welcome
 -------
 
 zdevices is the ZeroMQ devices collection, a repository of device packages
-written by and for ZeroMQ users.  All code is GPLv3 licensed.
+written by and for ZeroMQ users.  All code is licensed under LGPLv3+.
 
 Building and installation instructions are provided with each package.
 
@@ -31,7 +31,7 @@ See the BYLAWS file included with the distribution.
 Copying
 -------
 
-Free use of this software is granted under the terms of the GNU General Public
-License (LGPL). For details see the files `COPYING` included with the
-distribution.
+Free use of this software is granted under the terms of the GNU Lesser
+General Public License (LGPL). For details see the files `COPYING` and
+`COPYING.LESSER` included with the distribution.
 
